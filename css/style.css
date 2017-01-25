@@ -138,6 +138,8 @@ nav li a {
 }
 
 nav li a:hover {
+    background-color: #007ABC;
+    opacity: 0.5;
 }
 
 /*================
