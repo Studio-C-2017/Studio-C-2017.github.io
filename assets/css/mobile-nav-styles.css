@@ -1,10 +1,10 @@
-
 #mobile-header, #nav-button {
     height: 48pt;
     overflow: hidden;
 }
 
 #mobile-header {
+    display: none;
     width: 100vw;
     background-color: #007ABC;
     position: fixed;
@@ -19,10 +19,10 @@
     background-size: cover;
 }
 
-#nav-button:hover {
-    /*background-image: url(../img/nav-button-reverse.svg);*/
-}
 @media (max-width: 700px) {
+    header {
+        padding-top: 48pt;
+    }
 
     /* Makes #mobile-header visible */
     #mobile-header {
