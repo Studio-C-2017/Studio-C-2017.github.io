@@ -36,6 +36,8 @@ collections:
     employees:
         output: true
 
+#excerpt_separator: <!-- more -->
+
 defaults:
     -
         scope:
