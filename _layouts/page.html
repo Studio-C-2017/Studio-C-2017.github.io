@@ -4,7 +4,7 @@ layout: blank
 {% include nav-bar.html %}
 {% include header.html %}
 
-<main id="main {{ page.title | downcase }}Wrapper" class="page-wrapper">
+<main id="{{ page.title | downcase }}Wrapper" class="page-wrapper">
     {{ content }}
 </main>
 
