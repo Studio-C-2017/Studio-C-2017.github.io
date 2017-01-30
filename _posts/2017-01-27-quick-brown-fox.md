@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "The quick brown fox jumps over the lazy dog"
-date:   2017-01-26 05:50:32 -0800
 categories: news jekyll update
 ---
 The quick brown fox jumps over the lazy dog.

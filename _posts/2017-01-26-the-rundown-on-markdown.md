@@ -1,13 +1,16 @@
 ---
 layout: post
-author: Addison
-title:  "Examples!"
-date:   2017-01-26 05:50:32 -0800
+author: Addison C. Quijano Sorca
+date:   2017-01-26 9:30:00 -0800
+time: 1:32pm
 categories: news update
 ---
 This is an incomplete guide to the Markdown language, only including the elements I feel are most important. For a slightly more detailed introduction check out <http://daringfireball.net/projects/markdown/syntax>.
 
-Lorem ipsum dolor sit amet. Castigat ridendo mores, latinus canis forvinium. Omnia pro patria et e pluribus unum. Vulpes rapides iumpium overium canis lasius. Donaldus Trumpius idiotum gigantum est. Caesars Palacium locatium Flamingus et Boulevardum Vegasium est. Electium hovvus heum.
+Working with paragraphs is easy. Just write, and add an empty line between paragraphs. Paragraphs not separated by an empty line will be considered part of the same paragraph, allowing for hard-wrapped paragraphs.
+
+To have a br tag, end a paragraph with two spaces and write on the next line  
+Like so.
 
 # Example h1 tag
 ## Example h2 tag
@@ -18,7 +21,7 @@ Single asterisks will be *italicized*.
 Double asterisks will be **bold**.
 
 ### Web Links
-[example url](http://example.org)
+[This is an example url](http://example.org)
 #### Short form
 <http://example.org>
 
@@ -37,13 +40,15 @@ Double asterisks will be **bold**.
 5. Item Three
 
 ### Blockquotes
-So then he said
-> This is how you do blockquotes.
-> Blockquote blockquote blockquote
->> Nested blockquote
-
-And I said
-> What are you talking about?
+>So then he said
+>
+>> This is how you do blockquotes.
+>> Blockquote blockquote blockquote
+>>> Nested blockquote
+>
+>And I said
+>
+>> What are you talking about?
 
 ### Horizontal Rule
 This is a horizontal rule.
