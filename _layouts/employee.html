@@ -2,15 +2,19 @@
 layout: default
 image_url: example.org
 ---
-{% assign image_url = "/assets/img" | append: (page.url | replace: 'employees', 'employee_images' | replace: '.html','_1.png') %}
-<div class="employee-wrapper">
+<div id="employee-wrapper">
+    
     <header id="employee-header">
         <a href="/team.html" id="employee-back-link">&lt; Back to Employees</a> 
-        <div class="employee-image-wrapper">
-            <img src="{{ image_url }}" class="employee-image" />
+        <div id="employee-image-wrapper">
+            <img src="/assets/img/{{ page.image_url }}" class="employee-image" />
         </div>
         <h2>{{ page.title }}</h2>
         <span class="department">{{ page.department }} Department</span>
     </header>
-    {{ content }}
+    
+    <div id="employee-bio">
+        {{ content }}
+    </div>
+    
 </div>
