@@ -17,6 +17,7 @@ var nav = document.getElementsByTagName("nav")[0],
     navButton = document.getElementById("nav-button"),
     navButtonContainer = document.getElementById("nav-button-container"),
     main = document.getElementsByTagName("main")[0],
+    header = document.getElementsByClassName("page-title")[0],
     onpage = false; // Decides if Nav is in view of user
 
 // Puts Nav on page
@@ -61,6 +62,9 @@ navButton.addEventListener("click", slide);
 
 // Onclick of Main (slideoutclick)
 main.addEventListener("click", slideout);
+
+// Onclick of Header (also slideoutclick)
+header.addEventListener("click", slideout);
 
 // Unload (slideoutclick)
 window.addEventListener("beforeunload", slideout);

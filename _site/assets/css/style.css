@@ -33,7 +33,7 @@ footer {
 	margin: 0;
 }
 
-.navCover {
+nav {
   background-color: #007ABC;
 }
 
@@ -64,10 +64,10 @@ footer {
     text-align: center;
     padding: 50px 0px;
     color: #fff;
-    clear:left;
+    clear: both;
 }
 
-.pageTitleCover {
+.page-title {
     background-image: url("../img/maxres.jpg");
     color: #fff;
     text-align: center;
@@ -80,10 +80,14 @@ footer {
     overflow: hidden;
 }
 
-.pageTitleCover h1 {
+.page-title h1 {
     margin: 0;
     font-size: 80px;
 
+}
+
+.page-wrapper {
+    margin: 0 20%;
 }
 
 @media (max-width: 600px) {
@@ -102,7 +106,7 @@ mobile-header styles
 ================*/
 
 #mobile-header {
-    display: none;
+
 }
 
 /*================
@@ -139,14 +143,14 @@ nav li a {
 
 nav li a:hover {
     background-color: #007ABC;
-    opacity: 0.5;
+    color: #cccc;
 }
 
 /*================
 homepage styles
 ================*/
 
-header {
+#home-header {
 	width:100%;
 	height:100vh;
 	background-image:url("../img/index2.jpg");
@@ -154,6 +158,14 @@ header {
 	background-repeat:no-repeat;
 	background-position:center;
     background-attachment: fixed;
+}
+
+#home-header nav {
+    background-color: transparent;
+}
+
+#home-header nav a:hover {
+    background-color: transparent;
 }
 
 #logo {
@@ -293,10 +305,6 @@ about styles
 
 #aboutPageTitleCover h1 {
     margin: 0;
-}
-
-#aboutWrapper {
-    margin: 0 20%;
 }
 
 #aboutWrapper p {
@@ -709,4 +717,65 @@ contact styles
         height: 50px;
         position: relative;
     }
+}
+
+/*================
+Project Page Styles
+================*/
+.project-wrapper {
+    
+}
+
+.project-wrapper h4 {
+    font-size: 24pt;
+}
+
+.project-wrapper img {
+    height: 500px;
+}
+
+/*================
+Employee Page Styles
+================*/
+.employee-wrapper {
+    
+}
+
+#employee-header {
+    background-color: #ccc;
+    text-align: center;
+    padding: 20pt 0;
+}
+
+#employee-back-link {
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 12pt 6pt;
+    margin-left: 6pt;
+}
+
+#employee-back-link:hover {
+    background-color: black;
+    color: white;
+}
+
+#employee-header h2 {
+    margin-bottom: 0;
+}
+
+.employee-image-wrapper {
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+
+.employee-image {
+    text-align: center;
+    height: 200px;
 }
