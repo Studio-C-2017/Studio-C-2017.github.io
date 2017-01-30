@@ -1,0 +1,15 @@
+<div id="s{{ include.department | downcase }}_depart">
+	<h4 class="block_headers" id="code_header">{{ include.department }} Department</h4>
+	<!-- AKA The Real Heroes -->
+	<p class="block_intro" id="code_intro">{{ employees.code.summary }}</p>
+	
+	{% assign department = site.employees | where:"department", include.department %}
+	{% for employee in department %}
+	<div class="employee">
+		<a href="{{ employee.url }}">
+			<img src="/assets/img/{{ employee.image_url }}" class="deptWorkerImg" />
+			<div class="employee-name">{{ employee.title }}</div>
+		</a>
+	</div>
+	{% endfor %}
+</div>

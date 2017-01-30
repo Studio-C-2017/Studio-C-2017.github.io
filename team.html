@@ -6,138 +6,42 @@ title: Team
 
 <div id="teamBody">
     <div id="headmanagerBlock">
-        {% assign executive_department = site.employees | where:"department","Executive" %}
-        {% for employee in executive_department %}
-        <div class="employee">
-            <a href="{{ employee.url }}">
-                <img src="/assets/img/{{ employee.image_url }}" class="deptWorkerImg" />
-                <div class="employee-name">{{ employee.title }}</div>
-                <h5 class="mana_pos">Head Manager</h5>
+        {% assign executive_department = site.employees | where: "department", "Executive" %}
+        {% for head_manager in executive_department %}
+        <div class="managers">
+            <a href="{{ head_manager.url }}">
+                <img src="/assets/img/{{ head_manager.image_url }}" class="managerPic" />
+                <div class="employee-name">{{ head_manager.title }}</div>
+                <h5 class="manager-title">Head Manager</h5>
             </a>
         </div>
         {% endfor %}
     </div>
 
     <div id="departmanagerBlock">
-        <div class="managers" id="kar">
-            <div class="manager_cover">
-            </div>
-            <img src="/assets/img/employee-images/cynthia_1.png" alt="cynthia" class="managerPic">
-            <p class="mana_name">Cynthia Sze Nga Kar</p>
-            <h5 class="mana_pos">Usability Manager</h5>
-            <a href="{{ page.url }}#workers_block" id="cyn" class="teamBut"><h5 class="depart_mana_pos">View Team</h5></a>
+        {% assign department_managers = site.employees | where: "department_manager", "true" %}
+        {% for manager in department_managers %}
+        <div class="managers">
+            <img src="/assets/img/{{ manager.image_url }}" alt="{{ manager.title }}" class="managerPic" />
+            <p class="mana_name">{{ manager.title }}</p>
+            <h5 class="manager-title">{{ manager.department }} Manager</h5>
+            <a href="{{ page.url }}#workers_block" class="teamBut">
+                <h5 class="depart_mana_pos">View Team</h5>
+            </a>
         </div>
-        <div class="managers" id="camelo">
-            <div class="manager_cover">
-            </div>
-            <img src="/assets/img/employee-images/kevin_1.png" alt="kevin" class="managerPic">
-            <p class="mana_name">Kevin Camelo</p>
-            <h5 class="mana_pos">Marketing Manager</h5>
-            <a href="{{ page.url }}#workers_block" id="kev" class="teamBut"><h5 class="depart_mana_pos">
-            View Team</h5></a>
-        </div>
-        <div class="managers" id="raymond">
-            <div class="manager_cover">
-            </div>
-            <img src="/assets/img/employee-images/raymond_1.png" alt="raymond" class="managerPic">
-            <p class="mana_name">Raymond Heinzelman</p>
-            <h5 class="mana_pos">Code Manager</h5>
-            <a href="{{ page.url }}#workers_block" id="ray" class="teamBut"><h5 class="depart_mana_pos">View Team</h5></a>
-        </div>
-        <div class="managers" id="amanda">
-            <div class="manager_cover">
-            </div>
-            <img src="/assets/img/employee-images/amanda_1.png" alt="amanda" class="managerPic">
-            <p class="mana_name">Amanda Galvan</p>
-            <h5 class="mana_pos">Graphic Manager</h5>
-            <a href="{{ page.url }}#workers_block" id="ama" class="teamBut"><h5 class="depart_mana_pos">View Team</h5></a>
-        </div>
-        <div class="managers" id="brian">
-            <div class="manager_cover">
-            </div>
-            <img src="/assets/img/employee-images/brian_1.png" alt="brian" class="managerPic">
-            <p class="mana_name">Brian Tchen</p>
-            <h5 class="mana_pos">Content Manager</h5>
-            <a href="{{ page.url }}#workers_block" id="bri" class="teamBut"><h5 class="depart_mana_pos">View Team</h5></a>
-        </div>
+        {% endfor %}
     </div> <!-- END #departmanagerBlock -->
+    
 </div> <!-- END #teamBody -->
 
 <div id="workers_block">
-    <div id="usability_depart">
-        <h4 class="block_headers" id="user_header">Usability Department</h4>
-        <p class="block_intro" id="user_intro">This department will be testing if the site is user friendly, and that it functions on all browsers and devices.</p>
-        <div class="worker" id=""><img src="/assets/img/employee-images/josue_1.png" alt="josue" class="deptWorkerImg">
-            <p>Josue Galvez</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/jasmine_1.png" alt="jasmine" class="deptWorkerImg">
-            <p>Jasmine Phat</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/anjelika_1.png" alt="anjelika" class="deptWorkerImg">
-            <p>Anjelika Carson</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/jeff_1.png" alt="jeff" class="deptWorkerImg">
-            <p>Jeffery Bowers</p>
-        </div>
-    </div>
-    <div id="marketing_depart">
-        <h4 class="block_headers" id="market_header">Marketing Department</h4>
-        <p class="block_intro" id="market_intro">This department will be handling the marketing aspects of the site, and will present ways to get the site out to the public.</p>
-        <div class="worker" id=""><img src="/assets/img/employee-images/logan_1.png" alt="logan" class="deptWorkerImg">
-            <p>Logan White</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/dustin_1.png" alt="dustin" class="deptWorkerImg">
-            <p>Dustin Baker</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/keena_1.png" alt="keena" class="deptWorkerImg">
-            <p>Keena Venegas</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/john_1.png" alt="john" class="deptWorkerImg">
-            <p>John Biraogo</p>
-        </div>
-    </div>
-    <div id="code_depart">
-        <h4 class="block_headers" id="code_header">Coding Department</h4>
-        <!-- AKA The Real Heroes -->
-        <p class="block_intro" id="code_intro">This department will be coding the website, hosting, and creating and efficient product.</p>
-        {% assign code_department = site.employees | where:"department","Code" %}
-        {% for employee in code_department %}
-        <div class="employee">
-            <a href="{{ employee.url }}">
-                <img src="/assets/img{{ employee.url | replace: 'employees', 'employee-images' | replace: '.html','_1.png' }}" class="deptWorkerImg" />
-                <div class="employee-name">{{ employee.title }}</div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-    <div id="graphic_depart">
-        {% assign code_department = site.employees | where:"department","Graphics" %}
-        {% for employee in code_department %}
-        <div class="employee">
-            <a href="{{ employee.url }}">
-                <img src="/assets/img/{{ employee.image_url }}" class="deptWorkerImg" />
-                <div class="employee-name">{{ employee.title }}</div>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-    <div id="content_depart">
-        <h4 class="block_headers" id="content_header">Content Department</h4>
-        <p class="block_intro" id="content_intro">This department will be taking note of the different content that you want on the site, as well as writing the content for the site to use.</p>
-        <div class="worker" id=""><img src="/assets/img/employee-images/elda_1.png" alt="elda" class="deptWorkerImg">
-            <p>Elda Mekonnen</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/crystal_1.png" alt="crystal" class="deptWorkerImg">
-            <p>Crystal Menjivar</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/zhong_1.png" alt="zhong" class="deptWorkerImg">
-            <p>Zhong Lei</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/dawson_1.png" alt="dawson" class="deptWorkerImg">
-            <p>Dawson Antonucci</p>
-        </div>
-        <div class="worker" id=""><img src="/assets/img/employee-images/tristan_1.png" alt="tristan" class="deptWorkerImg">
-            <p>Tristan Wallace</p>
-        </div>
-    </div>
+    {% include department-section.html department="Usability" %}
+    
+    {% include department-section.html department="Marketing" %}
+    
+    {% include department-section.html department="Code" %}
+    
+    {% include department-section.html department="Graphics" %}
+    
+    {% include department-section.html department="Content" %}
 </div> <!-- END #workers_block -->
