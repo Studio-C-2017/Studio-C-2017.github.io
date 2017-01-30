@@ -1,18 +1,16 @@
 ---
-layout: default
+layout: blank
 ---
-<div class="project">
+{% include nav-bar.html %}
+<div class="project-wrapper">
     <h4>{{ page.title }}</h4>
-
-    <div class="project-details-container">
-
+    
+    <div class="img-container">
         <a href="{{ page.image_url }}" target="_blank"  id="emerald">
-            <div class="img-container">
-                <img src="{{ page.image_url }}" alt="Vector Self-Portrait" />
-            </div>
+            <img src="{{ page.image_url }}" alt="{{ page.title }}" />            
         </a>
-
-        <p>{{ content }}</p>
-
     </div>
+
+    {{ content }}
 </div>
+{% include footer.html %}

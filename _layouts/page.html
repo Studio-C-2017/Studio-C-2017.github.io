@@ -1,6 +1,11 @@
 ---
-layout: default
+layout: blank
 ---
-<div id="{{ page.title | downcase }}Wrapper" class="page-wrapper">
+{% include nav-bar.html %}
+{% include header.html %}
+
+<main id="main {{ page.title | downcase }}Wrapper" class="page-wrapper">
     {{ content }}
-</div>
+</main>
+
+{% include footer.html %}

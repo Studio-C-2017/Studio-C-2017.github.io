@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+---
+layout: blank
+---
+{% include nav-bar.html %}
 
-  {% include head.html %}
+<main id="main" class="page-content">
+    {{ content }}
+</main>
 
-    <body>
-        {% include header.html %}
-
-        <main id="main" class="page-content">
-            {{ content }}
-        </main>
-
-        {% include footer.html %}
-	</body>
-
-	<script type="text/javascript" src="/assets/js/script.js"></script>
-    <script type="text/javascript" src="/assets/js/slide-nav.js"></script>
-
-</html>
+{% include footer.html %}
