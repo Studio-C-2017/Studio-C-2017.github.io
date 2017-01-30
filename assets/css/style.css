@@ -464,12 +464,16 @@ team styles
     margin: 0% 20%;
 }
 
-.worker {
+.employee {
     text-align: center;
     display: inline-block;
 }
 
-.deptWorkerImg {
+.employee a {
+    text-decoration: none;
+}
+
+.employee img {
     border: 10px solid white;
     border-radius: 100%;
     height: 170px;
@@ -483,13 +487,16 @@ Work styles
 #workWrapper {
     margin: 0 20%;
     margin-top: 12pt;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project {
-    border-bottom: 2px solid #bbb;
-    margin-bottom: 26pt;
+    border: 2px solid #bbb;
     padding-bottom: 6pt;
     overflow: auto;
+    flex-basis: 500px;
+    margin: 12pt;
 }
 
 .project h4 {
@@ -501,7 +508,7 @@ Work styles
 }
 
 .project .project-details-container {
-    height: 200px;
+
 }
 
 .project a {
@@ -516,7 +523,6 @@ Work styles
     overflow: hidden;
     text-align: center;
     padding-right: 12pt;
-    border-right: 1px solid #bbb;
 }
 
 .project img {
@@ -754,7 +760,7 @@ Employee Page Styles
     background-color: white;
     color: black;
     padding: 12pt 6pt;
-    margin-left: 6pt;
+    margin-left: 0;
 }
 
 #employee-back-link:hover {
@@ -766,7 +772,7 @@ Employee Page Styles
     margin-bottom: 0;
 }
 
-.employee-image-wrapper {
+#employee-image-wrapper {
     display: inline-block;
     box-sizing: border-box;
     overflow: hidden;
@@ -778,4 +784,8 @@ Employee Page Styles
 .employee-image {
     text-align: center;
     height: 200px;
+}
+
+#employee-bio {
+    margin: 0 20%;
 }
