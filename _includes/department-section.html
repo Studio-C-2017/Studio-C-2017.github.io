@@ -1,7 +1,7 @@
-<div id="s{{ include.department | downcase }}_depart">
+<div id="{{ include.department | downcase }}_depart">
 	<h4 class="block_headers" id="code_header">{{ include.department }} Department</h4>
-	<!-- AKA The Real Heroes -->
-	<p class="block_intro" id="code_intro">{{ employees.code.summary }}</p>
+
+	<p class="block_intro" id="code_intro">{{ department-summaries.(include.department) }}</p>
 	
 	{% assign department = site.employees | where:"department", include.department %}
 	{% for employee in department %}
@@ -13,3 +13,7 @@
 	</div>
 	{% endfor %}
 </div>
+
+{% for summary in department-summaries %}
+{{ summary.content }}
+{% endfor %}

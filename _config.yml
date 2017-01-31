@@ -35,6 +35,7 @@ collections:
         output: true
     employees:
         output: true
+    department-summaries:
 
 #excerpt_separator: <!-- more -->
 
