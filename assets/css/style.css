@@ -487,51 +487,40 @@ Work styles
 #workWrapper {
     margin: 0 20%;
     margin-top: 12pt;
+}
+
+#project-thumbnail-container {
     display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
     flex-wrap: wrap;
 }
 
-.project {
+.project-thumbnail {
+    display: block;
     border: 2px solid #bbb;
     padding-bottom: 6pt;
-    overflow: auto;
-    flex-basis: 500px;
     margin: 12pt;
+    text-decoration: none;
+    width: 200px;
 }
 
-.project h4 {
+.project-thumbnail-title {
     font-size: 1.5em;
     font-weight: bolder;
     margin-top: 0;
     margin-bottom: 10pt;
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-.project .project-details-container {
-
-}
-
-.project a {
-    text-decoration: none;
-}
-
-.project .img-container {
+.project-thumbnail-title img {
     box-sizing: border-box;
-    width: 30%;
-    height: 100%;
-    float: left;
     overflow: hidden;
     text-align: center;
     padding-right: 12pt;
-}
-
-.project img {
     width: 100%;
-}
-
-.project p {
-    float: right;
-    width: 68%;
 }
 
 @media (max-width: 700px) {
@@ -728,23 +717,27 @@ contact styles
 /*================
 Project Page Styles
 ================*/
-.project-wrapper {
-    
+#project-wrapper {
+    display: flex;
 }
 
-.project-wrapper h4 {
+#project-wrapper h4 {
     font-size: 24pt;
 }
 
-.project-wrapper img {
+#project-wrapper img {
     height: 500px;
+}
+
+#project-description {
+    margin: 12pt;
 }
 
 /*================
 Employee Page Styles
 ================*/
 .employee-wrapper {
-    
+
 }
 
 #employee-header {
