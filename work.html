@@ -2,20 +2,11 @@
 layout: page
 title: Work
 ---
-{% for work in site.works %}
-<div class="project">
-    <h4>{{ work.title }}</h4>
-
-    <div class="project-details-container">
-
-        <a href="{{ work.url }}">
-            <div class="img-container">
-                <img src="{{ work.image_url }}" alt="{{ work.title }}" />
-            </div>
-        </a>
-
-        <p>{{ work.content }}</p>
-
-    </div>
+<div id="project-thumbnail-container">
+    {% for work in site.works %}
+    <a href="{{ work.url }}" class="project-thumbnail">
+        <img src="{{ work.image_url }}" alt="{{ work.title }}" />
+        <h3 class="project-thumbnail-title">{{ work.title }}</h3>
+    </a>
+    {% endfor %}
 </div>
-{% endfor %}
