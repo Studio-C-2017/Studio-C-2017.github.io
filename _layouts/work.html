@@ -2,15 +2,19 @@
 layout: blank
 ---
 {% include nav-bar.html %}
-<div class="project-wrapper">
-    <h4>{{ page.title }}</h4>
-    
-    <div class="img-container">
+
+<h1>{{ page.title }}</h1>
+<div id="project-wrapper">
+
+    <div id="project-image-container">
         <a href="{{ page.image_url }}" target="_blank"  id="emerald">
-            <img src="{{ page.image_url }}" alt="{{ page.title }}" />            
+            <img src="{{ page.image_url }}" alt="{{ page.title }}" />
         </a>
     </div>
 
-    {{ content }}
+    <div id="project-description">
+        {{ content }}
+    </div> <!-- END #project-description -->
+
 </div>
 {% include footer.html %}
