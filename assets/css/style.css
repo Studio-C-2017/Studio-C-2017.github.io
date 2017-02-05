@@ -90,6 +90,10 @@ footer {
     margin: 0 20%;
 }
 
+.collection-page-wrapper {
+    margin: 0 5%;
+}
+
 @media (max-width: 600px) {
     body {
         font-size: 13pt;
@@ -101,13 +105,7 @@ footer {
     }
 
 }
-/*================
-mobile-header styles
-================*/
 
-#mobile-header {
-
-}
 
 /*================
 nav styles DO NOT CHANGE
@@ -290,6 +288,17 @@ homepage styles
     background-image: url("../img/popart.png");
 }
 
+/*================
+News Page Styles
+================*/
+#news-feed {
+    display: block;
+    list-style-type: none;
+}
+
+.news-post {
+    border: 1px solid black;
+}
 
 /*================
 about styles
@@ -485,7 +494,7 @@ Work styles
 ================*/
 
 #workWrapper {
-    margin: 0 20%;
+    margin: 0 5%;
     margin-top: 12pt;
 }
 
@@ -494,33 +503,44 @@ Work styles
     flex-basis: 0;
     flex-grow: 1;
     flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .project-thumbnail {
     display: block;
     border: 2px solid #bbb;
-    padding-bottom: 6pt;
     margin: 12pt;
     text-decoration: none;
-    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    min-width: 300px;
+    min-height: 170px;
+    text-align: center;
+    color: white;
+}
+
+.project-thumbnail:hover {
+    color: #999;
 }
 
 .project-thumbnail-title {
-    font-size: 1.5em;
+    font-size: 16pt;
     font-weight: bolder;
-    margin-top: 0;
-    margin-bottom: 10pt;
+    text-align: right;
+    margin: 0;
     position: absolute;
     bottom: 0;
     right: 0;
+    background-color: rgba(0,0,0,0.75);
+    padding: 4pt;
 }
 
-.project-thumbnail-title img {
-    box-sizing: border-box;
+.project-thumbnail img {
     overflow: hidden;
     text-align: center;
-    padding-right: 12pt;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 @media (max-width: 700px) {
@@ -714,39 +734,7 @@ contact styles
     }
 }
 
-/*================
-Project Page Styles
-================*/
-#project-wrapper {
-    display: flex;
-}
-
-#project-wrapper h4 {
-    font-size: 24pt;
-}
-
-#project-wrapper img {
-    height: 500px;
-}
-
-#project-description {
-    margin: 12pt;
-}
-
-/*================
-Employee Page Styles
-================*/
-.employee-wrapper {
-
-}
-
-#employee-header {
-    background-color: #ccc;
-    text-align: center;
-    padding: 20pt 0;
-}
-
-#employee-back-link {
+.back-link {
     display: block;
     position: absolute;
     text-decoration: none;
@@ -756,9 +744,49 @@ Employee Page Styles
     margin-left: 0;
 }
 
-#employee-back-link:hover {
+.back-link:hover {
     background-color: black;
     color: white;
+}
+
+/*================
+Project Page Styles
+================*/
+#project-wrapper {
+
+}
+
+#project-header h1 {
+    text-align: center;
+}
+
+#project-content-wrapper {
+    display: flex;
+}
+
+#project-content-wrapper h4 {
+    font-size: 24pt;
+}
+
+#project-wrapper img {
+    width: 500px;
+}
+
+#project-description {
+    margin: 12pt;
+}
+
+/*================
+Employee Collection Styles
+================*/
+.employee-wrapper {
+
+}
+
+#employee-header {
+    background-color: #ccc;
+    text-align: center;
+    padding: 20pt 0;
 }
 
 #employee-header h2 {
@@ -781,4 +809,24 @@ Employee Page Styles
 
 #employee-bio {
     margin: 0 20%;
+    line-height: 1.25em;
+}
+
+/*================
+ News Post Styles
+================*/
+.post-wrapper {
+    margin: 0 18pt;
+}
+
+.post-meta {
+
+}
+
+.post-content {
+    line-height: 1.25em;
+}
+
+.post-wrapper img {
+    max-width: 100%;
 }
