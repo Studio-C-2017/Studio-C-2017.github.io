@@ -1,20 +1,23 @@
 ---
-layout: blank
+layout: default
 ---
-{% include nav-bar.html %}
-
-<h1>{{ page.title }}</h1>
 <div id="project-wrapper">
+    <header id="project-header">
+        <a href="/work.html" class="back-link">&lt;Back to Work Page</a>
+        <h1>{{ page.title }}</h1>
+    </header>
 
-    <div id="project-image-container">
-        <a href="{{ page.image_url }}" target="_blank"  id="emerald">
-            <img src="{{ page.image_url }}" alt="{{ page.title }}" />
-        </a>
+    <div id="project-content-wrapper">
+
+        <div id="project-image-container">
+            <a href="{{ page.image_url }}" target="_blank"  id="emerald">
+                <img src="{{ page.image_url }}" alt="{{ page.title }}" />
+            </a>
+        </div>
+
+        <div id="project-description">
+            {{ content }}
+        </div> <!-- END #project-description -->
+
     </div>
-
-    <div id="project-description">
-        {{ content }}
-    </div> <!-- END #project-description -->
-
 </div>
-{% include footer.html %}
