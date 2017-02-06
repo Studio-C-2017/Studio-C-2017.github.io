@@ -297,7 +297,29 @@ News Page Styles
 }
 
 .news-post {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 12pt 0;
+}
+
+.news-post-title {
+    margin: 6pt 0;
+}
+
+.news-post-title a {
+    text-decoration: none;
+    color: #007ABC;
+}
+
+.news-post-title a:hover {
+    color: #777;
+}
+
+.news-post-date {
+
+}
+
+.news-post-excerpt {
+    line-height: 1.5em;
 }
 
 /*================
@@ -813,7 +835,7 @@ Employee Collection Styles
 }
 
 /*================
- News Post Styles
+ News Article Styles
 ================*/
 .post-wrapper {
     margin: 0 18pt;
