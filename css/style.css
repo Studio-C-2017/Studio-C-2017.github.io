@@ -142,6 +142,20 @@ nav li a:hover {
     opacity: 0.5;
 }
 
+/* For stupid logo thing (blame Demitri) */
+#nav-logo-wrapper {
+    width: 120px;
+}
+
+#nav-logo-wrapper a {
+    position: absolute;
+    padding: 0;
+}
+
+#nav-logo {
+    /*width: 120px;*/
+}
+
 /*================
 homepage styles
 ================*/
