@@ -140,13 +140,12 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #007ABC;
     color: #cccc;
 }
 
 /* For stupid logo thing (blame Demitri) */
 #nav-logo-wrapper {
-    width: 120px;
+    width: 100px;
 }
 
 #nav-logo-wrapper a {
@@ -155,7 +154,11 @@ nav li a:hover {
 }
 
 #nav-logo {
-    /*width: 120px;*/
+    width: 120px;
+}
+
+#home-header nav #nav-logo-wrapper {
+    display: none;
 }
 
 /*================
