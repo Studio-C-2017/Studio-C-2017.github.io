@@ -1,0 +1,19 @@
+<div id="{{ include.department | lowercase }}" class="department">
+	<h4 class="block_headers" id="code_header">{{ include.department }} Department</h4>
+
+	<p class="block_intro" id="code_intro">{{ department-summaries.(include.department) }}</p>
+
+	{% assign department = site.employees | where:"department", include.department %}
+	{% for employee in department %}
+	<div class="employee">
+		<a href="{{ employee.url }}">
+			<img src="/assets/img/{{ employee.image_url }}" class="deptWorkerImg" />
+			<div class="employee-name">{{ employee.title }}</div>
+		</a>
+	</div>
+	{% endfor %}
+</div>
+
+{% for summary in department-summaries %}
+{{ summary.content }}
+{% endfor %}

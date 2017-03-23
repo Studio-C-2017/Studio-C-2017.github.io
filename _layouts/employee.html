@@ -1,0 +1,19 @@
+---
+layout: default
+image_url: example.org
+---
+<div id="employee-wrapper">
+
+    <header id="employee-header">
+        <a href="/team.html" class="back-link">&lt; Back to Employees</a>
+        <div id="employee-image-wrapper">
+            <img src="/assets/img/{{ page.image_url }}" class="employee-image" />
+        </div>
+        <h2>{{ page.title }}</h2>
+        <span class="employee-department">{{ page.department }} Department</span>
+    </header>
+
+    <div id="employee-bio">
+        {{ content }}
+    </div>
+</div>

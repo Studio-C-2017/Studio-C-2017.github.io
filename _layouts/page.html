@@ -1,0 +1,11 @@
+---
+layout: blank
+---
+{% include nav-bar.html %}
+{% include header.html %}
+
+<main id="{{ page.title | downcase }}Wrapper" class="page-wrapper">
+    {{ content }}
+</main>
+
+{% include footer.html %}

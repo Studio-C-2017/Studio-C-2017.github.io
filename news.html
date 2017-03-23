@@ -1,0 +1,19 @@
+---
+layout: collection-page
+title: News
+---
+<ul id="news-feed">
+    {% for post in site.posts %}
+    <li class="news-post">
+        <h2 class="news-post-title">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <div class="news-post-date">
+            {{ post.date | date: "%A, %B %-d, %Y" }}
+        </div>
+        <div class="news-post-excerpt">
+            {{ post.excerpt }}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
