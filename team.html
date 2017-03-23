@@ -5,32 +5,36 @@ title: Team
 <h1 id="team_heading">Managers</h1>
 
 <div id="teamBody">
-    <div id="headmanagerBlock">
+    <div id="head-managers">
         {% assign executive_department = site.employees | where: "department", "Executive" %}
         {% for head_manager in executive_department %}
-        <div class="managers">
-            <a href="{{ head_manager.url }}">
+        <div class="manager">
+            <a href="{{ head_manager.url }}" class="manager-link">
                 <img src="/assets/img/{{ head_manager.image_url }}" class="managerPic" />
-                <div class="employee-name">{{ head_manager.title }}</div>
+                <div class="manager-name">{{ head_manager.title }}</div>
                 <h5 class="manager-title">Head Manager</h5>
             </a>
         </div>
         {% endfor %}
     </div>
 
-    <div id="departmanagerBlock">
+    <div id="department-managers">
+
         {% assign department_managers = site.employees | where: "department_manager", "true" %}
+
         {% for manager in department_managers %}
-        <div class="managers">
-            <img src="/assets/img/{{ manager.image_url }}" alt="{{ manager.title }}" class="managerPic" />
-            <p class="mana_name">{{ manager.title }}</p>
-            <h5 class="manager-title">{{ manager.department }} Manager</h5>
-            <a href="{{ page.url }}#workers_block" class="teamBut">
-                <h5 class="depart_mana_pos">View Team</h5>
+        <div class="manager">
+            <a href="{{ manager.url }}" class="manager-link">
+                <img src="/assets/img/{{ manager.image_url }}" alt="{{ manager.title }}" class="managerPic" />
+                <div class="manager-name">{{ manager.title }}</div>
+                <h5 class="manager-title">{{ manager.department }} Manager</h5>
+            </a>
+            <a href="{{ page.url }}#{{ manager.department }}" class="team-button">
+                View Team
             </a>
         </div>
         {% endfor %}
-    </div> <!-- END #departmanagerBlock -->
+    </div> <!-- END #department-managers -->
 
 </div> <!-- END #teamBody -->
 
