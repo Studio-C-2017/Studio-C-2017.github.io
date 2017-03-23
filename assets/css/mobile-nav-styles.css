@@ -1,9 +1,11 @@
 #mobile-header, #nav-button {
     height: 48pt;
     overflow: hidden;
+    z-index: 20;
 }
 
 #mobile-header {
+    top: 0;
     display: none;
     width: 100vw;
     background-color: #007ABC;
@@ -19,6 +21,11 @@
     background-size: cover;
 }
 
+@media (max-width: 900px) {
+    #nav-logo-wrapper {
+        display: none;
+    }
+}
 @media (max-width: 700px) {
     header {
         padding-top: 48pt;
@@ -47,8 +54,21 @@
         height: 100vh;
         background-color: #007ABC;
         overflow: scroll;
+        z-index: 30;
     }
 
+    #nav-logo-wrapper {
+        display: none;
+    }
+
+    #home-header nav {
+        background-color: #007ABC;
+    }
+
+    #home-header nav a:hover {
+        background-color: white;
+        color: #007ABC;
+    }
     nav ul {
         display: block;
         padding: 0;
