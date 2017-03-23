@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Studio C 2017 Website
 This is the Studio C Class of 2017 website. It contains an about page, a contact page, examples of previous work for potential clients to look at, and short bios for every member of Studio C.
 
