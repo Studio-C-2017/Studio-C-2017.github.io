@@ -1,4 +1,4 @@
-<div>
+<div id="{{ include.department | lowercase }}" class="department">
 	<h4 class="block_headers" id="code_header">{{ include.department }} Department</h4>
 
 	<p class="block_intro" id="code_intro">{{ department-summaries.(include.department) }}</p>
