@@ -33,10 +33,14 @@ footer {
 	margin: 0;
 }
 
+p {
+    line-height: 1.5em;
+}
 nav {
   background-color: #007ABC;
 }
 
+header {}
 #button {
   text-align: center;
   background-color: #007abc;
@@ -65,6 +69,7 @@ footer {
     padding: 50px 0px;
     color: #fff;
     clear: both;
+    font-size: 14pt;
 }
 
 .page-title {
@@ -179,6 +184,10 @@ homepage styles
     background-color: transparent;
 }
 
+#home-header #nav-logo-wrapper {
+    display: none;
+}
+
 #logo {
     display: block;
     margin-left: auto;
@@ -200,14 +209,14 @@ homepage styles
     color: #007abc;
     text-align: center;
     font-family: "Metropolis";
+    margin: 16pt 0 12pt;
 }
 
 #about_index_content {
-    line-height: 1.5em;
     text-align: center;
-    font-size: 24px;
     margin: 0% 20%;
     padding-bottom: 25px;
+    font-size: 16pt;
 }
 
 @media (max-width: 700px) {
@@ -367,13 +376,18 @@ about styles
     margin: 0 30px 30px 0;
 }
 
-#about_goals li{
-    margin: 25px 0;
-}
-
-#about_goals h4{
+#about-goals h3 {
     font-size: 18pt;
     color: #007abc;
+}
+
+#goals-list {
+    font-size: 13pt;
+    line-height: 1.5em;
+}
+
+#goals-list li {
+    margin: 12pt;
 }
 
 #description{
@@ -429,46 +443,57 @@ team styles
     text-transform: uppercase;
 }
 
-#cyn,
-#kev,
-#ray,
-#ama,
-#bri {
-    text-decoration:none;
-}
-
-#headmanagerBlock {
+#head-managers {
     text-align: center;
 }
 
-#departmanagerBlock {
+#department-managers {
     text-align: center;
 }
 
-.managers {
+.manager {
     padding: 25px;
     display: inline-block;
     text-align: center;
 }
 
-.depart_mana_pos {
+.manager-link {
+    text-decoration: none;
+    color: #007ABC;
+}
+
+.manager-link:visited {
+    color: #007ABC;
+}
+
+.manager-link:hover {
+    color: #777;
+}
+
+.team-button {
     transition:all 0.4s ease-in-out;
     border:1px solid #000000;
     width:60%;
     margin:auto;
     padding:10px 5px 10px 5px;
     text-decoration: none;
+    color: #000000;
+    display: block;
 }
 
-.depart_mana_pos:hover {
-    border:1px solid #007abc;
+.team-button:hover {
     background-color:#007abc;
-    color:#ffffff;
+    color: white;
+}
+
+.manager-name {
+
 }
 
 .manager-title {
     font-weight: bolder;
     text-transform: uppercase;
+    margin: 10pt;
 }
 
 .managerPic {
@@ -478,22 +503,13 @@ team styles
     width: 200px;
 }
 
-.teamBut {
-    color:#000000;
+#workers_block {
 }
 
-#workers_block {
+.department {
+    border-top: 2px solid gray;
     margin: 0 10% 30px 10%;
     text-align: center;
-    border-top: 2px solid gray;
-}
-
-#usability_depart,
-#marketing_depart,
-#code_depart,
-#graphic_depart,
-#content_depart {
-    display:none;
 }
 
 .block_headers {
@@ -515,6 +531,11 @@ team styles
 
 .employee a {
     text-decoration: none;
+    color: #007ABC;
+}
+
+.employee a:hover {
+    color: #777;
 }
 
 .employee img {
@@ -535,10 +556,9 @@ Work styles
 
 #project-thumbnail-container {
     display: flex;
-    flex-basis: 0;
-    flex-grow: 1;
     flex-wrap: wrap;
     align-items: stretch;
+    justify-content: center;
 }
 
 .project-thumbnail {
@@ -546,11 +566,10 @@ Work styles
     border: 2px solid #bbb;
     margin: 12pt;
     text-decoration: none;
-    height: 150px;
     overflow: hidden;
     position: relative;
-    min-width: 300px;
-    min-height: 170px;
+    width: 250px;
+    height: 250px;
     text-align: center;
     color: white;
 }
@@ -643,11 +662,7 @@ Work styles
 contact styles
 ================*/
 
-#contactWrapper {
-    text-align: center;
-    margin: 12pt 15%;
-}
-
+/* The form stuff has been removed */
 #form-container {
     display: inline-block;
     width: 45%;
@@ -655,10 +670,6 @@ contact styles
     border: 2px solid #bbb;
     height: 100%;
     padding-bottom: 145px;
-}
-
-#pageTitleContainer h1 {
-    display: none;
 }
 
 #contact-form {
@@ -689,18 +700,34 @@ contact styles
     width: initial;
 }
 
-#info {
-    width: 45%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    display: inline-block;
+/* This stuff is still used */
+
+#contactWrapper {
 }
 
-#info img {
-  width: 50%;
-  height: 50%;
-    float: left;
-    padding-bottom: 20px;
+#chang-contact {
+    text-align: left;
+    padding: .5em;
+    margin: 1em auto;
+    width: 500px;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+    font-size: 13pt;
+    line-height: 1.5em;
+}
+
+#chang-contact a {
+    text-decoration: none;
+}
+
+#chang-image {
+    height: 200px;
+    margin-right: 12pt;
+}
+
+#chang-contact-info-wrapper {
+
 }
 
 #google-maps-container {
@@ -709,18 +736,10 @@ contact styles
 
 #map {
     width: 100%;
+    min-height: 600px;
+    margin-bottom: 12pt;  
 }
 
-#chang_contact {
-    text-align: left;
-    padding: .5em;
-    margin-bottom: 1em;
-    font-size: 12pt;
-}
-
-#chang_contact h2 {
-
-}
 
 @media (max-width: 700px) {
 
@@ -776,6 +795,7 @@ contact styles
     background-color: white;
     color: black;
     padding: 12pt 6pt;
+    margin-top: 12pt;
     margin-left: 0;
 }
 
@@ -788,22 +808,32 @@ contact styles
 Project Page Styles
 ================*/
 #project-wrapper {
+}
 
+#project-header {
+    background-color: #ccc;
+    padding: 2em 0;
 }
 
 #project-header h1 {
     text-align: center;
+    margin-bottom: 0;
 }
 
 #project-content-wrapper {
     display: flex;
+    margin:0 20%;
 }
 
 #project-content-wrapper h4 {
     font-size: 24pt;
 }
 
-#project-wrapper img {
+#project-image-wrapper {
+    text-align: center;
+}
+
+#project-image {
     width: 500px;
 }
 
